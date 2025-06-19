@@ -1,0 +1,139 @@
+{
+  /* =================== 👨‍💻 编辑器设置 =================== */
+  "editor.fontFamily": "Maple Mono, '黑体', monospace", // 设置编辑器字体
+  "editor.fontSize": 19, // 编辑器字体大小
+  "editor.letterSpacing": 0.5, // 字符间距
+  "editor.fontLigatures": true, // 启用字体连字
+
+  "editor.cursorStyle": "line", // 光标样式
+  "editor.cursorWidth": 2, // 光标宽度
+  "editor.cursorBlinking": "expand", // 光标闪烁动画
+  "editor.cursorSmoothCaretAnimation": "on", // 平滑光标动画
+  "editor.minimap.enabled": false, // 隐藏代码小地图，简洁清爽
+  "editor.scrollbar.vertical": "visible", // 垂直滚动条始终可见
+
+  "editor.wordWrap": "on", // 自动换行
+  "editor.renderLineHighlight": "all", // 高亮整行
+  "editor.renderWhitespace": "none", // 不显示空白字符
+  "editor.renderControlCharacters": true, // 显示控制字符
+  "editor.linkedEditing": true, // 同步编辑 HTML 标签等
+
+  "editor.mouseWheelScrollSensitivity": 2, // 鼠标滚轮灵敏度
+  "editor.smoothScrolling": true, // 平滑滚动
+  "editor.multiCursorModifier": "ctrlCmd", // 多光标快捷键
+
+  "editor.formatOnPaste": true, // 粘贴时自动格式化
+  "editor.formatOnSave": true, // 保存时自动格式化
+  "editor.tabCompletion": "on", // 启用 Tab 补全
+  "editor.largeFileOptimizations": false, // 禁用大文件优化（更高自由度）
+
+  /* 🎨 自定义语法高亮（如 docstring 高亮颜色） */
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "string.quoted.docstring.multi.python",
+        "settings": {
+          "foreground": "#00bfa5", // docstring 显眼绿色
+          "fontStyle": "italic" // 斜体显示
+        }
+      }
+    ]
+  },
+
+  /* =================== 🖥️ 终端设置 =================== */
+  "terminal.integrated.fontFamily": "Maple Mono, '黑体', monospace",
+  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.rightClickBehavior": "default",
+  "terminal.integrated.mouseWheelScrollSensitivity": 2,
+  "terminal.integrated.mouseWheelZoom": true,
+
+  "terminal.integrated.env.windows": {
+    "KMP_DUPLICATE_LIB_OK": "TRUE", // 防止 OpenMP 报错
+    "OMP_NUM_THREADS": "1" // 限制线程数，防爆显存
+  },
+
+  /* =================== 🌐 窗口 & 外观 =================== */
+  "window.titleBarStyle": "custom",
+  "window.menuBarVisibility": "visible",
+  "window.dialogStyle": "custom",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.colorTheme": "Bluloco Dark Italic", // 主题（美观+护眼）
+  "workbench.iconTheme": "material-icon-theme", // 图标主题
+  "workbench.productIconTheme": "material-product-icons", // 产品图标
+
+  "workbench.list.smoothScrolling": true,
+  "workbench.list.mouseWheelScrollSensitivity": 2,
+
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#FF0000", // 编辑器光标颜色：红色
+    "terminalCursor.foreground": "#FF0000" // 终端光标颜色：红色
+  },
+
+  /* =================== 📁 资源管理器 =================== */
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
+
+  /* =================== 📝 文件保存 =================== */
+  "files.autoSave": "afterDelay", // 自动保存
+  "window.confirmSaveUntitledWorkspace": false, // 关闭保存提示
+
+  /* =================== 🔌 插件 & 扩展支持 =================== */
+
+  // 💡 Code Runner：C++ 快速编译运行
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+    "cpp": "cd $dir && g++ $fileName -D LOCAL -o .\\build\\$fileNameWithoutExt.exe && .\\build\\$fileNameWithoutExt.exe"
+  },
+
+  // 📦 Python 插件设置
+  "python.analysis.autoImportCompletions": true,
+  "python.createEnvironment.trigger": "off",
+
+  // 🔐 VS Code 信任机制
+  "security.workspace.trust.untrustedFiles": "open",
+
+  // 🌍 Remote SSH 主机平台
+  "remote.SSH.remotePlatform": {
+    "10.185.16.171": "linux",
+    "s-sunxc": "linux",
+    "10.185.14.221": "linux",
+    "guangdong-ai": "linux"
+  },
+
+  // 💻 Live Server 静默设置
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+
+  // 📁 文件格式化支持（Prettier）
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "workbench.settings.applyToAllProfiles": ["editor.formatOnSave"],
+
+  /* =================== 🔧 Git 设置 =================== */
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "git.ignoreRebaseWarning": true,
+  "git.confirmSync": false,
+  "git.openRepositoryInParentFolders": "never",
+
+  /* =================== 🧠 文件关联 =================== */
+  "workbench.editorAssociations": {
+    "*.tif": "default"
+  }
+}
