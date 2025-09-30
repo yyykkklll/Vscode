@@ -1,7 +1,7 @@
 {
   /* =================== 👨‍💻 编辑器设置 =================== */
-  "editor.fontFamily": "Maple Mono, '黑体', monospace", // 设置编辑器字体
-  "editor.fontSize": 19, // 编辑器字体大小
+  "editor.fontFamily": "Google Sans Code, 'HarmonyOS Sans SC', monospace", // 设置编辑器字体
+  "editor.fontSize": 18, // 编辑器字体大小
   "editor.letterSpacing": 0.5, // 字符间距
   "editor.fontLigatures": true, // 启用字体连字
 
@@ -27,21 +27,21 @@
   "editor.tabCompletion": "on", // 启用 Tab 补全
   "editor.largeFileOptimizations": false, // 禁用大文件优化（更高自由度）
 
-  /* 🎨 自定义语法高亮（如 docstring 高亮颜色） */
-  "editor.tokenColorCustomizations": {
-    "textMateRules": [
-      {
-        "scope": "string.quoted.docstring.multi.python",
-        "settings": {
-          "foreground": "#00bfa5", // docstring 显眼绿色
-          "fontStyle": "italic" // 斜体显示
-        }
-      }
-    ]
-  },
+  // /* 🎨 自定义语法高亮（如 docstring 高亮颜色） */
+  // "editor.tokenColorCustomizations": {
+  //   "textMateRules": [
+  //     {
+  //       "scope": "string.quoted.docstring.multi.python",
+  //       "settings": {
+  //         "foreground": "#057eba" // docstring 显眼绿色
+  //         // "fontStyle": "italic" // 斜体显示
+  //       }
+  //     }
+  //   ]
+  // },
 
   /* =================== 🖥️ 终端设置 =================== */
-  "terminal.integrated.fontFamily": "Maple Mono, '黑体', monospace",
+  "terminal.integrated.fontFamily": "Google Sans Code, 'HarmonyOS Sans SC', monospace",
   "terminal.integrated.fontSize": 18,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.rightClickBehavior": "default",
@@ -58,13 +58,10 @@
   "window.menuBarVisibility": "visible",
   "window.dialogStyle": "custom",
   "workbench.editor.empty.hint": "hidden",
-  "workbench.colorTheme": "Bluloco Dark Italic", // 主题（美观+护眼）
+  "workbench.colorTheme": "Best Themes - Lunar", // 主题（美观+护眼）
   "workbench.iconTheme": "material-icon-theme", // 图标主题
-  "workbench.productIconTheme": "material-product-icons", // 产品图标
-
   "workbench.list.smoothScrolling": true,
   "workbench.list.mouseWheelScrollSensitivity": 2,
-
   "workbench.colorCustomizations": {
     "editorCursor.foreground": "#FF0000", // 编辑器光标颜色：红色
     "terminalCursor.foreground": "#FF0000" // 终端光标颜色：红色
@@ -99,7 +96,8 @@
     "10.185.16.171": "linux",
     "s-sunxc": "linux",
     "10.185.14.221": "linux",
-    "guangdong-ai": "linux"
+    "guangdong-ai": "linux",
+    "wsl-server": "linux"
   },
 
   // 💻 Live Server 静默设置
@@ -135,5 +133,8 @@
   /* =================== 🧠 文件关联 =================== */
   "workbench.editorAssociations": {
     "*.tif": "default"
-  }
+  },
+  /* =================== 🧠 逆向代理 =================== */
+  "http.proxy": "http://127.0.0.1:8889",
+  "https.proxy": "http://127.0.0.1:8889"
 }
